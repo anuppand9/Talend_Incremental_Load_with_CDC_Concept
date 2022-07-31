@@ -1,0 +1,23 @@
+This job will validate the defined schema and produce validated data for loading into database.
+
+**Context Value**
+1. LastRunDetailTable: "" (Database table which store all the job detail)
+2. InputDir:"" (File path where file will be store after validation)
+3. SourceDir:"" (Input File Path where raw file will placed)
+4. InputFile_Name: "" (Raw File Name)
+5. OutPutFileName: "" (Output File Name)
+6. StartTime:  (Dummy value in date time format)
+7. LogPath: "" (Log Path, all error and reject data will store here)
+
+******
+1. Place the context value for your job.
+2. Change DB Connection.
+3. Change schmeas as per data.
+4. Set data validation part as per data.
+
+Execute the Job, this will produce the validated data for further use and rejected data for reviewing.
+
+**
+Althoug all error log, rejected records, and deleted record report will placed at log path folder, but a mail notification might be added in job.
+
+

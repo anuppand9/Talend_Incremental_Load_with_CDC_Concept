@@ -1,0 +1,20 @@
+This job will scan the define directory and whenever a new file is placed, job will start executing and perform the "Change Data Capture" logic and load the changed data into database.
+
+***Context Variable***
+LastRunDetailTable:"" (Job Stats Table)
+InputDir: "" (Validated data will placed in this path)
+LogPath: "" (Log Path, all error and reject data will store here)
+StartTime:  (dummy value in datetime format)
+sourceTable: "" (database table name where data need to load)
+
+*******
+1. Place the context value for your job.
+2. Change DB Connection.
+3. Change schmeas as per data.
+4. Set change data catpure logic in tAddCRCRow component.
+
+Execute the job, this will load the validated and new data into source table.
+
+**
+Althoug all error log, rejected records, and deleted record report will placed at log path folder, but a mail notification might be added in job.
+

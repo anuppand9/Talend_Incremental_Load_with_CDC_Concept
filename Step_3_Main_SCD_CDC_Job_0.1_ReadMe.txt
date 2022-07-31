@@ -1,0 +1,20 @@
+This job will load the data from source to target and match the data from target to source and delete the data from target which is not available in source.
+
+***Context Variable***
+LastRunDetailTable:"" (Job Stats Table)
+sourceTable: "" (source database table name where from data will load)
+targetTable: "" (target database where data will be loaded)
+LogPath: "" (Log Path, all error and reject data will store here)
+StartTime:  (dummy value in datetime format)
+SourceQuery:"" (Sql Query for data fetching)
+
+*******
+1. Place the context value for your job.
+2. Change DB Connection.
+3. Change schmeas as per data.
+
+Execute the job, this will load the validated and new data into target table and remove all those records from target which is not available in source table.
+
+**
+Althoug all error log, rejected records, and deleted record report will placed at log path folder, but a mail notification might be added in job.
+
